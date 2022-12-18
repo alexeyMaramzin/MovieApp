@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Noticia+Text:ital@1&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #22063F;
+}
+
+.header {
+  height: 134px;
+  background-color: #1F0A34;
+  -webkit-box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1320px;
+  height: 52px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+.header__container input {
+  border: none;
+  padding-left: 50px;
+  padding-bottom: 2px;
+  width: 300px;
+}
+.header__container input:focus {
+  background-color: rgb(249, 236, 249);
+  border-color: rgb(59, 4, 107);
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem #22063F;
+          box-shadow: 0 0 0 0.2rem #22063F;
+}
+.header__container input::-webkit-input-placeholder {
+  font-family: "Inter";
+  font-weight: 200;
+  font-size: 20px;
+}
+.header__container input::-moz-placeholder {
+  font-family: "Inter";
+  font-weight: 200;
+  font-size: 20px;
+}
+.header__container input:-ms-input-placeholder {
+  font-family: "Inter";
+  font-weight: 200;
+  font-size: 20px;
+}
+.header__container input::-ms-input-placeholder {
+  font-family: "Inter";
+  font-weight: 200;
+  font-size: 20px;
+}
+.header__container input::placeholder {
+  font-family: "Inter";
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.header__logo {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 43px;
+  line-height: 52px;
+  color: white;
+}
+.header__search {
+  width: 337px;
+  height: 54px;
+  border-radius: 12px;
+  font-family: "Inter";
+  color: rgb(42, 41, 41);
+  font-weight: 200;
+  font-size: 21px;
+}
+
+.movies-container {
+  max-width: 1320px;
+  margin: 82px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 80px 1fr 80px 1fr 80px 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 80px;
+}
+
+.movies-grid {
+  width: 269px;
+}
+.movies-grid__card-img {
+  width: 269px;
+  margin-top: -40px;
+}
+.movies-grid__card-title {
+  line-height: 35px;
+  color: rgba(255, 255, 255, 0.793);
+  font-weight: 300;
+  background-color: rgba(26, 25, 30, 0.6862745098);
+  padding-top: 12px;
+  margin-top: -5px;
+  padding: 10px 0 0 10px;
+}
+.movies-grid__card-genres {
+  color: rgba(248, 248, 96, 0.793);
+  font-size: 18px;
+  background-color: rgba(26, 25, 30, 0.6862745098);
+  border-radius: 0 0 10px 10px;
+  padding: 0 10px 10px;
+}
+.movies-grid__rating {
+  color: white;
+  margin: 0px 0 -20px 15px;
+  padding: 10px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 23px;
+  height: 23px;
+  font-size: 14px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.834);
+  background-color: rgba(34, 34, 34, 0.994);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+.movies-grid__green {
+  border: 1px solid rgb(37, 155, 14);
+  color: rgb(37, 155, 14);
+}
+.movies-grid__orange {
+  border: 1px solid rgba(243, 167, 45, 0.834);
+  color: rgba(243, 167, 45, 0.834);
+}
+.movies-grid__red {
+  border: 1px solid rgba(233, 49, 49, 0.834);
+  color: rgba(233, 49, 49, 0.834);
+}
+.movies-grid__hide {
+  border: 1px solid rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.movies-pagination {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1320px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.pagination__item {
+  display: block;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  color: white;
+  margin: 0 18px;
+  padding: 0 2px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.pagination__item:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.pagination__active {
+  background-color: rgb(171, 4, 232);
+}
+
+.hide {
+  display: none;
+}
