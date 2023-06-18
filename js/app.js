@@ -78,7 +78,7 @@ function showPagination(data){
 let moviesSearch = document.querySelector(".header__search");
 let keyword;
 moviesSearch.addEventListener('change', ()=>{
-    if(moviesSearch.value.length>3){
+    if(moviesSearch.value.length>1){
         keyword=moviesSearch.value;
         let getMovie=
 `https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=${keyword}`

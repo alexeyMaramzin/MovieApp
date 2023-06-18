@@ -17,7 +17,8 @@ body{
     max-width: 1320px;
     height: 52px;
     margin: 0 auto;
-    padding-top: 40px;
+    padding: 40px 20px 0 20px;
+    
     input{
         border: none;
         padding-left: 50px;
@@ -63,12 +64,14 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 80px;
+    overflow: hidden;
 }
 .movies-grid {
-    width: 269px;
+    max-width: 360px;
+    margin: 0 auto;
 		&__card-img {
-            width: 269px;
             margin-top: -40px;
+            max-width: 100%;
 		}
 
 		&__card-title {
@@ -90,7 +93,7 @@ body{
 		}
         &__rating{
             color: white;
-            margin: 0px 0 -20px 15px;
+            margin: 20px 0 -20px 15px;
             padding: 10px;
             border-radius: 50%;
             display: flex;
@@ -126,10 +129,15 @@ body{
     max-width: 1320px;
     margin: 0 auto;
 }
+pagination::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
 .pagination {
     display: flex;
     max-width: 1320px;
     margin: 0 auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
     justify-content: space-between;
 		&__item {
             display: block;
@@ -152,5 +160,32 @@ body{
 .hide{
     display: none;
 }
-
-
+@media screen and (max-width: 1450px){
+    .movies-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (max-width: 1250px){
+    .movies-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 850px){
+    .movies-container{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 700px){
+    .header__container{
+        display: block;
+        input{
+            margin-top: 30px;
+        }
+    }
+    .header{
+        height: 220px;
+    }
+    .header__container input{
+        width: 180px;
+    }
+}
